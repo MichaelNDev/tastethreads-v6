@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <main>
+        <a href="/logout">Logout</a>
+
+        <p>Here you can browse what kinds of food you are in the mood for.</p>
+        <p>Or you can upload a dish from a restaurant you've tried and like to share!</p>
+
+        <form action="/post" method="POST" enctype="multipart/form-data">
+            <label for="titleinput">Dish Name</label>
+            <input type="text" id="titleinput" name="titleinput">
+
+            <label for="imgUpload">ImageURL</label>
+            <input type="file" id="imgUpload" name="file">
+
+            <!-- <label for="user">User</label>
+            <input type="string" id="user" name="user"> -->
+
+            <button type="submit">Upload</button>
+        </form>
+
+        <ul>
+            <% for(let i = 0; i < posts.length; i++) {%>
+                <li>
+                    <p><%= posts[i].titleinput %></p>
+                    <p><%= posts[i].userId.username %></p>
+                    <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
+                    <a href="/post/<%= posts[i]._id%>">
+                        <button>Check Post</button>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

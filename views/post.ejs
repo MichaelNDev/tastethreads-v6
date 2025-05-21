@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <h1>This is the post page.</h1>
+
+    <a href="/dashboard">
+        <button>Return to feed</button>
+    </a>
+    <p><%= currentPost.titleinput %></p>
+    <img src="<%= currentPost.imageurl %>" alt="missing img"/>
+
+    <form action="/post/:id/addreview" method="POST">
+
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+
+        <label for="rating">Rating</label>
+        <input type="number" id="rating" name="rating">
+
+        <label for="comment">Comment</label>
+        <input type="text" id="comment" name="comment">
+
+        <input type="hidden" name="postId" value="<%= currentPost._id %>">
+
+        <button type="submit">Add Review</button>
+    </form>
+
+    <ul>
+        <% for(let i = 0; i < reviews.length; i++) {%>
+            <li>
+                <p><%= reviews[i].title %></p>
+                <p><%= reviews[i].rating %></p>
+                <p><%= reviews[i].comment %></p>
+                <p><%= reviews[i].date %></p>
+                <p><%= reviews[i].user %></p>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
