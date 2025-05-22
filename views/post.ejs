@@ -13,6 +13,9 @@
         <button>Return to feed</button>
     </a>
     <p><%= currentPost.titleinput %></p>
+    <p><%= currentPost.restaurant %></p>
+    <p><%= currentPost.city %></p>
+    <p><%= currentPost.meats %></p>
     <img src="<%= currentPost.imageurl %>" alt="missing img"/>
 
     <form action="/post/:id/addreview" method="POST">

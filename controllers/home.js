@@ -109,6 +109,9 @@ module.exports = {
             const newPost = new Post(
                 {
                     titleinput: req.body.titleinput,
+                    meats: req.body.meats,
+                    city: req.body.city,
+                    restaurant: req.body.restaurant,
                     imageurl: result.secure_url,
                     cloudinaryId: result.public_id,
                     userId: thisUser._id,

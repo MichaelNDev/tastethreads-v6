@@ -4,6 +4,18 @@ const postSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	meats: {
+		type: String,
+		required: true
+	},
+	city: {
+		type: String,
+		required: true
+	},
+	restaurant: {
+		type: String,
+		required: true
+	},
 	imageurl: {
 		type: String,
 		required: true
@@ -17,11 +29,12 @@ const postSchema = new mongoose.Schema({
 		ref: "User", // This tells Mongoose what model this ObjectId refers to
 		required: true
   	},
-	// Missing cloudinary field
 	cloudinaryId: {
 		type: String,
 		require: true
 	},
+	
+	
 })
 
 module.exports = mongoose.model('post', postSchema, 'post')

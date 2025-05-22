@@ -17,6 +17,21 @@
             <label for="titleinput">Dish Name</label>
             <input type="text" id="titleinput" name="titleinput">
 
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+
+            <label for="restaurant">Restaurant</label>
+            <input type="text" id="restaurant" name="restaurant">
+
+            <label for="meats">Choose a meat category:</label>
+            <select name="meats" id="meats">
+                <option value="">--Please choose a category--</option>
+                <option value="beef">Beef</option>
+                <option value="pork">Pork</option>
+                <option value="poultry">Poultry</option>
+                <option value="seafood">Seafood</option>
+            </select>
+
             <label for="imgUpload">ImageURL</label>
             <input type="file" id="imgUpload" name="file">
 
@@ -31,6 +46,9 @@
                 <li>
                     <p><%= posts[i].titleinput %></p>
                     <p><%= posts[i].userId.username %></p>
+                    <p><%= posts[i].restaurant %></p>
+                    <p><%= posts[i].city %></p>
+                    <p><%= posts[i].meats %></p>
                     <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
                     <a href="/post/<%= posts[i]._id%>">
                         <button>Check Post</button>
