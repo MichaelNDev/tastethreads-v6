@@ -30,12 +30,6 @@
     -moz-text-fill-color: transparent;
 }
 
-
-img {
-    height: 200px;
-    width: auto;
-}
-
 html, body {
     height: 100%;
     width: 100%;
@@ -61,6 +55,40 @@ nav {
     background-color: var(--l-background);
 }
 
+.nav-buttons {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+li a:hover {
+    border: 1px solid var(--l-secondary);
+    background-color: var(--l-secondary);
+    transition: ease-out .2s;
+}
+
+
+.nav-buttons a {
+    border: 1px solid var(--l-primary);
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 20px;
+    background-color: var(--l-primary);
+    text-decoration: none;
+    color: var(--l-text);
+    margin-right: 10px;
+}
+
 .logo {
     display: flex;
     justify-content: space-between;
@@ -69,7 +97,7 @@ nav {
     height: 100%;
 }
 
-.logo a{
+.logo > a{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -77,7 +105,7 @@ nav {
     color: inherit; /* Changes hyperlink color to its parent element */
 }
 
-.logo a:hover {
+.logo > a:hover {
     color: var(--d-primary);
     transition: ease-out .2s;
 }
@@ -88,18 +116,36 @@ nav {
 
 main {
     display: flex;
-    flex-direction: row;
-    padding-left: 30px;
-    padding-right: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     padding-top: 100px;
     width: 100vw;
 }
 
-.headliner {
-    width: 50%;
+.card {
+    margin-top: 100px;
+    padding: 20px;
+    border: 5px solid var(--l-accent);
+    border-radius: 20px;
+    background-color: var(--l-accent);
+    min-width: 415px;
+    min-height: 415px;
 }
 
-.headliner a {
+.card p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form button {
     border: 1px solid var(--l-primary);
     border-radius: 10px;
     padding: 15px 20px;
@@ -107,42 +153,29 @@ main {
     background-color: var(--l-primary);
     text-decoration: none;
     color: var(--l-text);
-    margin-right: 20px;
+    margin-top: 20px;
 }
 
-.headliner a:hover{
+form button:hover {
     border: 1px solid var(--l-secondary);
     background-color: var(--l-secondary);
     transition: ease-out .2s;
+    cursor: pointer;
 }
 
-h1 {
-    font-family: "Raleway", sans-serif;
-    font-size: 60px;
-    font-weight: 700;
+label {
+    font-size: 1.2rem;
 }
 
-.image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    width: 50%;
+input {
+    height: 30px;
+    font-size: 1.2rem;
 }
 
-img {
-    height: 550px;
-    border: 10px solid var(--l-accent);
-    border-radius: 100px;
-    box-shadow: 10px 10px 7px var(--l-text);
+h2 {
+    font-size: 28px;
+    text-align: center;
 }
-
-img:hover {
-    border: 10px solid var(--l-primary);
-    transition: ease-in .2s;
-}
-
-
 
 i {
     font-size: 32px;
@@ -163,3 +196,4 @@ footer {
     bottom: 0;
     left: 0;
 }
+

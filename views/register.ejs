@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <i class="fa-solid fa-bowl-food"></i>
+                <p>TasteThreads</p>
+            </a>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                </ul>
+            <div>
+        </div>
+    </nav>
     <main>
-            <h2>Create a TasteThreads account</h2>
-            
+
+        <div class="card">
+            <h2>Create A TasteThreads Account</h2>    
             <form action="/register" method="POST">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username">
@@ -24,9 +48,10 @@
 
                 <button type="submit">Register</button>
             </form>
+        </div>
+    </main>
 
-            <a href="/">Home</a>
-            <a href="/login">Login</a>
-        </main>
+        <footer>Developed by MichaelNDev</footer>
+    <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
 </body>
 </html>

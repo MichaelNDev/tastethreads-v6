@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <i class="fa-solid fa-bowl-food"></i>
+                <p>TasteThreads</p>
+            </a>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/register">Register</a>
+                    </li>
+                </ul>
+            <div>
+        </div>
+    </nav>
     <main>
-        <h1>Login</h1>
-        <form action="/login" method="POST">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
+        <div class="card">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
 
-            <button type="submit">Log In</button>
-        </form>
-        <div class="div-for-register">
-            <a class="register-button" href="/register">Register</a>
-        <div>
-            <a href="/">Home</a>
+                <button type="submit">Login</button>
+            </form>
+            <p>Haven't register an account with us? <a href="/register">Register here.</a></p>
+        </div>
     </main>
+    <footer>Developed by MichaelNDev</footer>
+    <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
 </body>
 </html>
