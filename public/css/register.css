@@ -130,6 +130,7 @@ main {
     border: 5px solid var(--l-accent);
     border-radius: 20px;
     background-color: var(--l-accent);
+    box-shadow: 1px 5px 7px var(--l-text);
 }
 
 form {

@@ -92,7 +92,8 @@ main {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 100px;
-    width: 100vw;
+    width: 100%;
+    min-width: 1000px;
 }
 
 .headliner {
@@ -161,5 +162,4 @@ footer {
     color: var(--l-background);
     position: absolute;
     bottom: 0;
-    left: 0;
 }

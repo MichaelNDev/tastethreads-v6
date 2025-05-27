@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <i class="fa-solid fa-bowl-food"></i>
+                <p>TasteThreads</p>
+            </a>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            <div>
+        </div>
+    </nav>
     <main>
-        <a href="/logout">Logout</a>
-
-        <p>Here you can browse what kinds of food you are in the mood for.</p>
-        <p>Or you can upload a dish from a restaurant you've tried and like to share!</p>
+        <div class="section-one">
+        <h2>Upload A Dish You'd Like To Share!</h2>
+        <p>Have a special dish you enjoy from a local restaurant? Upload and share them!</p>
 
         <form action="/post" method="POST" enctype="multipart/form-data">
             <label for="titleinput">Dish Name</label>
             <input type="text" id="titleinput" name="titleinput">
 
-            <label for="city">City</label>
-            <input type="text" id="city" name="city">
-
             <label for="restaurant">Restaurant</label>
             <input type="text" id="restaurant" name="restaurant">
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
 
             <label for="meats">Choose a meat category:</label>
             <select name="meats" id="meats">
@@ -34,28 +52,34 @@
 
             <label for="imgUpload">ImageURL</label>
             <input type="file" id="imgUpload" name="file">
-
-            <!-- <label for="user">User</label>
-            <input type="string" id="user" name="user"> -->
-
             <button type="submit">Upload</button>
         </form>
-
-        <ul>
-            <% for(let i = 0; i < posts.length; i++) {%>
-                <li>
-                    <p><%= posts[i].titleinput %></p>
-                    <p><%= posts[i].userId.username %></p>
-                    <p><%= posts[i].restaurant %></p>
-                    <p><%= posts[i].city %></p>
-                    <p><%= posts[i].meats %></p>
-                    <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
-                    <a href="/post/<%= posts[i]._id%>">
-                        <button>Check Post</button>
-                    </a>
-                </li>
-            <% } %>
-        </ul>
+        </div>
+        <div class="section-two">
+            <h2>Community Dish Recomendations</h2>
+            <p>Our patrons posted dishes from your local restaurants you may be interested in.</p>
+            <ul>
+                <% for(let i = 0; i < posts.length; i++) {%>
+                    <div class="card">
+                        <li>
+                            <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
+                            <span><strong>Dish:</strong> <%= posts[i].titleinput %></span>
+                            <span><strong>Restaurant:</strong> <%= posts[i].restaurant %></span>
+                            <span><strong>City:</strong> <%= posts[i].city %></span>
+                            <span><strong>Meat:</strong> <%= posts[i].meats %></span>
+                            <span><strong>Recommended By:</strong> <%= posts[i].userId.username %></span>
+                            <div class="button-container">
+                                <a href="/post/<%= posts[i]._id%>">
+                                    <button>Click Here To See Reviews</button>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                <% } %>
+            </ul>
+        </div>
     </main>
+    <footer>Developed by MichaelNDev</footer>
+    <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
 </body>
 </html>

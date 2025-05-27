@@ -9,7 +9,8 @@ Features Completed:
 
 Partially Completed:
 
+- Add CSS styling to app
+
 Not Completed:
 
 - Flash Messages
-- Add CSS styling to app
