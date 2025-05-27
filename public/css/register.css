@@ -130,7 +130,7 @@ main {
     border: 5px solid var(--l-accent);
     border-radius: 20px;
     background-color: var(--l-accent);
-    box-shadow: 1px 5px 7px var(--l-text);
+    box-shadow: 5px 5px 7px var(--l-text);
 }
 
 form {
@@ -163,6 +163,7 @@ label {
 input {
     height: 30px;
     font-size: 1.2rem;
+    border-radius: 10px;
 }
 
 h2 {

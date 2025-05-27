@@ -130,10 +130,10 @@ module.exports = {
     getPost: async (req,res) => {
         try {
             // store the post I want inside a variable to access all its info in the ejs later
-            const thisPost = await Post.findById(req.params.id)
+            const thisPost = await Post.findById(req.params.id).populate('userId')
             // variable contains all reviews associated with the post ID
             const thisReview = await Review.find({postId: req.params.id})
-            console.log(req.user.username)
+            console.log(thisPost)
             res.render("post", {currentPost: thisPost, reviews: thisReview})
         } catch(err) {
             console.log(err)

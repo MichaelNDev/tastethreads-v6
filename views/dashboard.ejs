@@ -44,20 +44,18 @@
             <label for="meats">Choose a meat category:</label>
             <select name="meats" id="meats">
                 <option value="">--Please choose a category--</option>
-                <option value="beef">Beef</option>
-                <option value="pork">Pork</option>
-                <option value="poultry">Poultry</option>
-                <option value="seafood">Seafood</option>
+                <option value="Beef">Beef</option>
+                <option value="Pork">Pork</option>
+                <option value="Poultry">Poultry</option>
+                <option value="Seafood">Seafood</option>
             </select>
-
-            <label for="imgUpload">ImageURL</label>
             <input type="file" id="imgUpload" name="file">
             <button type="submit">Upload</button>
         </form>
         </div>
         <div class="section-two">
             <h2>Community Dish Recomendations</h2>
-            <p>Our patrons posted dishes from your local restaurants you may be interested in.</p>
+            <p>Our patrons posted dishes from your local restaurants you may be hungry for.</p>
             <ul>
                 <% for(let i = 0; i < posts.length; i++) {%>
                     <div class="card">
@@ -79,7 +77,7 @@
             </ul>
         </div>
     </main>
-    <footer>Developed by MichaelNDev</footer>
+    <!-- <footer>Developed by MichaelNDev</footer> -->
     <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
 </body>
 </html>

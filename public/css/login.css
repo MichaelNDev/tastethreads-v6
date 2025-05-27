@@ -132,7 +132,7 @@ main {
     background-color: var(--l-accent);
     min-width: 415px;
     min-height: 415px;
-    box-shadow: 1px 5px 7px var(--l-text);
+    box-shadow: 5px 5px 7px var(--l-text);
 }
 
 .card p {
@@ -171,6 +171,7 @@ label {
 input {
     height: 30px;
     font-size: 1.2rem;
+    border-radius: 10px;
 }
 
 h2 {
