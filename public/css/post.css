@@ -30,6 +30,7 @@ body {
     background-color: var(--l-background);
     color: var(--l-text);
     position: relative;
+    right: 0;
 }
 
 nav {
@@ -49,11 +50,13 @@ nav {
     display: flex;
 }
 
-ul {
+.nav-buttons ul {
     display: flex;
     justify-content: center;
-    padding-left: 0px;
-    padding-right: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 20px;
 }
 
 li {
@@ -108,8 +111,7 @@ main {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-height: 1000px;
     height: 100%;
     padding-top: 100px;
 }
@@ -140,10 +142,18 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    border: 5px solid var(--l-accent);
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 20px;
+    background-color: var(--l-background);
+    color: var(--l-text);
 }
 
-li {
-    border-bottom: 1px solid var(--l-background);
+.container-right li {
+    border-bottom: 1px solid var(--l-accent);
+    padding-bottom: 20px;
 }
 
 li p {
@@ -166,7 +176,7 @@ h2 {
 /* Card Design for Posts */
 
 .card {
-    height: 550px;
+    height: 520px;
     width: 500px;
     border: 5px solid var(--l-accent);
     border-radius: 20px;
@@ -243,4 +253,15 @@ img {
 form {
     display: flex;
     flex-direction: column;
+}
+
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.comment-middle span {
+    margin: 0 20px 0 0;
+    padding: 0;
 }

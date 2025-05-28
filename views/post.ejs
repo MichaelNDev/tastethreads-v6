@@ -63,11 +63,14 @@
             <ul>
                 <% for(let i = 0; i < reviews.length; i++) {%>
                     <li>
-                        <p><strong><%= reviews[i].title %></strong></p>
-                        <p>Rating: <%= reviews[i].rating %>/10</p>
+                        
+                        <h3><%= reviews[i].title %></h3>
+                        <div class="comment-middle">
+                            <span>Rating: <%= reviews[i].rating %>/10</span>
+                            <span><%= reviews[i].date.toDateString() %></span>
+                            <span>Review by: <%= reviews[i].user %></span>
+                        </div>
                         <p><%= reviews[i].comment %></p>
-                        <p><%= reviews[i].date.toDateString() %></p>
-                        <p>Review by: <%= reviews[i].user %></p>
                     </li>
                 <% } %>
             </ul>
