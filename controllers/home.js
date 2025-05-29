@@ -133,8 +133,9 @@ module.exports = {
             const thisPost = await Post.findById(req.params.id).populate('userId')
             // variable contains all reviews associated with the post ID
             const thisReview = await Review.find({postId: req.params.id})
-            console.log(thisPost)
-            res.render("post", {currentPost: thisPost, reviews: thisReview})
+            const thisUser = req.user.username
+            console.log(thisReview)
+            res.render("post", {currentPost: thisPost, reviews: thisReview, currentUser: thisUser})
         } catch(err) {
             console.log(err)
         }
@@ -153,6 +154,15 @@ module.exports = {
         try {
             await newReview.save()
             console.log(newReview)
+            res.redirect(req.get('referer'))
+        } catch(err) {
+            console.log(err)
+        }
+    },
+    deleteReview: async (req,res) => {
+        try {
+            await Review.findByIdAndDelete({_id: req.params.id})
+            console.log('Review deleted successfully.')
             res.redirect(req.get('referer'))
         } catch(err) {
             console.log(err)

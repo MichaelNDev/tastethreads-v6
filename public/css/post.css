@@ -176,7 +176,7 @@ h2 {
 /* Card Design for Posts */
 
 .card {
-    height: 520px;
+    height: 550px;
     width: 500px;
     border: 5px solid var(--l-accent);
     border-radius: 20px;
@@ -228,6 +228,22 @@ h2 {
     transition: ease-out .2s;
 }
 
+.card .overall-rating{
+    margin: -10px 0 0 0;
+    padding: 0 0 5px 0;
+    background-color: var(--l-accent);
+}
+
+.card:hover .overall-rating{
+    transition: ease-out .2s;
+    background-color: var(--l-primary);
+}
+
+.card .overall-rating h2 {
+    margin: 0;
+    padding: 0;
+}
+
 
 
 
@@ -264,4 +280,38 @@ h3 {
 .comment-middle span {
     margin: 0 20px 0 0;
     padding: 0;
+}
+
+.container-right button{
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--d-primary);
+    background-color: var(--l-primary);
+}
+
+.container-right button:hover{
+    background-color: var(--l-error);
+    transition: ease-out .2s;
+}
+
+button:hover i {
+    transition: ease-out .2s;
+}
+
+button > i {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--l-background);
+}
+
+.container-right .edit:hover{
+    background-color: var(--l-secondary);
+    transition: ease-out .2s;
+}
+
+.delete-update {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

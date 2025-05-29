@@ -33,6 +33,9 @@
         <div class="container-left">
             <div class="card">
                 <img src="<%= currentPost.imageurl %>" alt="an img"/>
+                <div class="overall-rating">
+                    <h2>Overall Rating: <%= (reviews.map(x => x.rating).reduce((a,b) => a + b, 0) / reviews.length).toFixed(1) %></h2>
+                </div>
                 <span><strong>Dish:</strong> <%= currentPost.titleinput %></span>
                 <span><strong>Restaurant:</strong> <%= currentPost.restaurant %></span>
                 <span><strong>City:</strong> <%= currentPost.city %></span>
@@ -47,7 +50,7 @@
                     <input type="text" id="title" name="title">
 
                     <label for="rating">Rating: 1-10</label>
-                    <input type="number" id="rating" name="rating">
+                    <input type="number" id="rating" name="rating" max="10" min="1">
 
                     <label for="comment">Comment</label>
                     <textarea id="comment" name="comment" rows="5"></textarea>
@@ -67,10 +70,20 @@
                         <h3><%= reviews[i].title %></h3>
                         <div class="comment-middle">
                             <span>Rating: <%= reviews[i].rating %>/10</span>
-                            <span><%= reviews[i].date.toDateString() %></span>
+                            <span><%= reviews[i].date.toDateString().split(' ').slice(1).join(' ') %></span>
                             <span>Review by: <%= reviews[i].user %></span>
                         </div>
                         <p><%= reviews[i].comment %></p>
+                        <% if(currentUser == reviews[i].user) { %>
+                                <div class="delete-update">
+                                    <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
+                                        <button class="edit" type="submit"><i class="fa-solid fa-pen"></i></button>
+                                    </form>
+                                    <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
+                                        <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
+                                </div>
+                         <% } %>
                     </li>
                 <% } %>
             </ul>

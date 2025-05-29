@@ -5,6 +5,7 @@ const PORT = process.env.PORT
 const SECRET = process.env.SECRET
 const session = require('express-session')
 // const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 const MongoStore = require('connect-mongo')
 const homeRoutes = require('./routes/home')
 const connectDB = require('./config/database')
@@ -28,6 +29,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(methodOverride('_method'))
 
 app.use(passport.initialize())
 app.use(passport.session())
