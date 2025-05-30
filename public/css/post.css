@@ -283,7 +283,7 @@ h3 {
 }
 
 .container-right button{
-    width: 200px;
+    width: 150px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid var(--d-primary);
@@ -302,6 +302,7 @@ button:hover i {
 button > i {
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 10px;
     color: var(--l-background);
 }
 

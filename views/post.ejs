@@ -76,7 +76,7 @@
                         <p><%= reviews[i].comment %></p>
                         <% if(currentUser == reviews[i].user) { %>
                                 <div class="delete-update">
-                                    <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
+                                    <form action="/updateReview/<%= reviews[i].id %>?_method=PUT" method="POST">
                                         <button class="edit" type="submit"><i class="fa-solid fa-pen"></i></button>
                                     </form>
                                     <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">

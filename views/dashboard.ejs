@@ -56,9 +56,17 @@
         <div class="section-two">
             <h2>Community Dish Recomendations</h2>
             <p>Our patrons posted dishes from your local restaurants you may be hungry for.</p>
+            <div class="filter-card-button">
+                <span>Select filter:</span>
+                <button onclick="filterCards('Beef')">Beef</button>
+                <button onclick="filterCards('Pork')">Pork</button>
+                <button onclick="filterCards('Poultry')">Poultry</button>
+                <button onclick="filterCards('Seafood')">Seafood</button>
+                <button onclick="filterCards('all')">Show All</button>
+            </div>
             <ul>
                 <% for(let i = 0; i < posts.length; i++) {%>
-                    <div class="card">
+                    <div class="card" data-meat="<%= posts[i].meats %>">
                         <li>
                             <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
                             <span><strong>Dish:</strong> <%= posts[i].titleinput %></span>
@@ -79,5 +87,7 @@
     </main>
     <!-- <footer>Developed by MichaelNDev</footer> -->
     <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
+    <!-- /public/js/dashboard will not work because our path has assume /public as the default -->
+    <script src="/js/dashboard.js"></script>
 </body>
 </html>
