@@ -214,7 +214,6 @@ h2 {
     margin-top: 15px;
 }
 
-
 .button-container button:hover {
     background-color: var(--l-primary);
     transition: ease-out .2s;
@@ -302,6 +301,7 @@ h3 {
 
 .container-right button:hover{
     background-color: var(--l-error);
+    border: 1px solid var(--l-error);
     transition: ease-out .2s;
 }
 
@@ -346,6 +346,39 @@ button > i {
     gap: 10px;
 }
 
+.delete-update > div > button:hover {
+    background-color: var(--l-secondary);
+    border: 1px solid var(--l-secondary);
+    transition: ease-out .2s;
+    cursor: pointer;
+}
+
 .hidden {
     display: none;
+}
+
+.update-review input {
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+.update-review textarea {
+    margin-bottom: 20px;
+}
+
+.update-review button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.update-review button:hover {
+    background-color: var(--d-secondary);
+    border: 1px solid var(--d-secondary);
+    transition: ease-out .2s;
+}
+
+.edit {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

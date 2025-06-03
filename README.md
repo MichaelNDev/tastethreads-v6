@@ -6,11 +6,11 @@ Features Completed:
 - Login
 - Reviews have all the required fields
 - Post upload with cloudinary images
+- CSS styling
 
 Partially Completed:
 
-- Add CSS styling to app
-
 Not Completed:
 
+- Mobile View
 - Flash Messages

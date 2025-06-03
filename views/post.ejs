@@ -75,28 +75,34 @@
                                 <span>Review by: <%= reviews[i].user %></span>
                             </div>
                             <p><%= reviews[i].comment %></p>
-                            <div class="hidden">
+                            <% if(currentUser == reviews[i].user) { %>
+                            <div class="hidden update-review">
                                 <form action="/review/<%= reviews[i].id %>?_method=PUT" method="POST" class="update-form">
                                     <label for="rating">Update Rating</label>
-                                    <input type="number" id="rating" name="rating">
+                                    <input type="number" id="rating" name="rating" min="1" max="10">
 
                                     <label for="comment">Update Comment</label>
                                     <textarea id="comment" name="comment" rows="5"></textarea>
 
-                                    <button type="submit">Update</button>
+                                    <div class="review-update-buttons">
+                                        <button type="submit">Update Changes</button>
+                                        <button type="button" class="cancel">Cancel Changes</button>
+                                    </div>
                                 </form>
                             </div>
+                            <% } %>
                         </div>
                         <% if(currentUser == reviews[i].user) { %>
-                                <div class="delete-update">
-                                    <div>
-                                        <button id="edit"><i class="fa-solid fa-pen"></i></button>
-                                    </div>
-                                    <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
-                                        <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                                    </form>
-                                </div>
-                         <% } %>
+                        <div class="delete-update">
+                            <div>
+                                <!-- Unfortunately unable to add an icon since it'll cause issue with the onlick event. -->
+                                <button class="edit">edit</button>
+                            </div>
+                            <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
+                                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </div>
+                        <% } %>
                     </li>
                 <% } %>
             </ul>

@@ -144,6 +144,10 @@ h2 {
 }
 .section-one {
     text-align: center;
+    background-color: var(--l-text);
+    color: var(--l-background);
+    border-bottom: 1px solid var(--l-text);
+    padding-bottom: 20px;
 }
 
 input {

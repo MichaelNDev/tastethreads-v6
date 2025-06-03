@@ -1,6 +1,18 @@
-const update = document.querySelector("#edit")
-const editField = document.querySelector(".hidden")
+const update = document.querySelectorAll(".edit")
+const cancelEdit = document.querySelectorAll(".cancel")
 
-update.addEventListener("click", _ => {
-    editField.classList.toggle("hidden")
-})
+// Finally this works, took 3 hours
+// The key here is to add the eventlistener to all of the buttons
+// Then through a series of pathing to the proper element we toggle hidden
+update.forEach(elem => elem.addEventListener("click", 
+    (e) => {
+        // e.target.parentElement.previousElementSibling.classList.toggle("hidden")
+        e.target.parentElement.parentElement.previousElementSibling.lastElementChild.classList.toggle("hidden")
+    }
+))
+
+cancelEdit.forEach(elem => elem.addEventListener("click",
+    (e) => {
+        e.target.parentElement.parentElement.parentElement.classList.toggle("hidden")
+    }
+))
