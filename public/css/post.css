@@ -137,6 +137,7 @@ main {
     overflow-y: scroll; /* Going to need this for overflow of reviews */
 }
 
+
 .container-right ul {
     display: flex;
     flex-direction: column;
@@ -156,6 +157,7 @@ main {
     padding-bottom: 20px;
 }
 
+
 li p {
     margin: 0;
     padding: 0;
@@ -170,6 +172,7 @@ i {
 
 h2 {
     text-align: center;
+    font-size: 32px;
 }
 
 
@@ -239,9 +242,11 @@ h2 {
     background-color: var(--l-primary);
 }
 
-.card .overall-rating h2 {
+.card .overall-rating h4 {
+    text-align: center;
+    font-size: 24px;
     margin: 0;
-    padding: 0;
+    padding: 5px;
 }
 
 
@@ -280,6 +285,11 @@ h3 {
 .comment-middle span {
     margin: 0 20px 0 0;
     padding: 0;
+}
+
+.container-left {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .container-right button{
@@ -334,4 +344,8 @@ button > i {
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+
+.hidden {
+    display: none;
 }

@@ -22,6 +22,7 @@ router.post('/login', homeController.postLogin)
 router.post('/post/:id/addreview', homeController.createReview)
 // Missing upload.single("file") below.
 router.post('/post', upload.single("file"), homeController.createPost)
+router.put('/review/:id', ensureAuthenticated, homeController.updateReview)
 
 router.delete("/deleteReview/:id", ensureAuthenticated, homeController.deleteReview)
 

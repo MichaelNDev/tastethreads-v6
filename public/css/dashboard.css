@@ -204,6 +204,12 @@ ul {
     cursor: pointer;
 }
 
+.button-container:active button:active {
+    background-color: var(--l-secondary);
+    cursor: pointer;
+    transition: ease-out 0s;
+}
+
 .card:hover button{
     background-color: var(--d-primary);
     transition: ease-out .2s;

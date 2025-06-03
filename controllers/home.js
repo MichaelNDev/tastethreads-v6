@@ -171,7 +171,10 @@ module.exports = {
     },
     updateReview: async (req,res) => {
         try {
-            await Review.findByIdAndUpdate({_id: req.params.id})
+            await Review.findByIdAndUpdate({_id: req.params.id}, {
+                rating: req.body.rating,
+                comment: req.body.comment
+            })
             console.log('Review updated successfully.')
             res.redirect(req.get('referer'))
         } catch(err) {
