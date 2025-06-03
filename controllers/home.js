@@ -109,6 +109,7 @@ module.exports = {
             const newPost = new Post(
                 {
                     titleinput: req.body.titleinput,
+                    price: req.body.price,
                     meats: req.body.meats,
                     city: req.body.city,
                     restaurant: req.body.restaurant,

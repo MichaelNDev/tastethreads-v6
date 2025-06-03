@@ -35,6 +35,9 @@
             <label for="titleinput">Dish Name</label>
             <input type="text" id="titleinput" name="titleinput">
 
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" step="0.01">
+
             <label for="restaurant">Restaurant</label>
             <input type="text" id="restaurant" name="restaurant">
 
@@ -70,13 +73,14 @@
                         <li>
                             <img src="<%= posts[i].imageurl%>" alt="<%= posts[i].titleinput %>">
                             <span><strong>Dish:</strong> <%= posts[i].titleinput %></span>
+                            <span><strong>Price:</strong> $<%= posts[i].price %></span>
                             <span><strong>Restaurant:</strong> <%= posts[i].restaurant %></span>
                             <span><strong>City:</strong> <%= posts[i].city %></span>
                             <span><strong>Meat:</strong> <%= posts[i].meats %></span>
                             <span><strong>Recommended By:</strong> <%= posts[i].userId.username %></span>
                             <div class="button-container">
                                 <a href="/post/<%= posts[i]._id%>">
-                                    <button>Click Here To See Reviews</button>
+                                    <button>See Reviews</button>
                                 </a>
                             </div>
                         </li>

@@ -65,15 +65,16 @@
             <h2>Reviews</h2>
             <ul>
                 <% for(let i = 0; i < reviews.length; i++) {%>
-                    <li>
-                        
-                        <h3><%= reviews[i].title %></h3>
-                        <div class="comment-middle">
-                            <span>Rating: <%= reviews[i].rating %>/10</span>
-                            <span><%= reviews[i].date.toDateString().split(' ').slice(1).join(' ') %></span>
-                            <span>Review by: <%= reviews[i].user %></span>
+                    <li class="review-list">
+                        <div class="review-core">
+                            <h3><%= reviews[i].title %></h3>
+                            <div class="comment-middle">
+                                <span>Rating: <%= reviews[i].rating %>/10</span>
+                                <span><%= reviews[i].date.toDateString().split(' ').slice(1).join(' ') %></span>
+                                <span>Review by: <%= reviews[i].user %></span>
+                            </div>
+                            <p><%= reviews[i].comment %></p>
                         </div>
-                        <p><%= reviews[i].comment %></p>
                         <% if(currentUser == reviews[i].user) { %>
                                 <div class="delete-update">
                                     <form action="/updateReview/<%= reviews[i].id %>?_method=PUT" method="POST">

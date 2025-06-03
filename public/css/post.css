@@ -283,7 +283,7 @@ h3 {
 }
 
 .container-right button{
-    width: 150px;
+    width: 125px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid var(--d-primary);
@@ -311,8 +311,27 @@ button > i {
     transition: ease-out .2s;
 }
 
+.review-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.review-core {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+
 .delete-update {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
