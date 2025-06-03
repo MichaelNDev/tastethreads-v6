@@ -1,10 +1,10 @@
-const update = document.querySelectorAll(".edit")
+const displayUpdateForm = document.querySelectorAll(".edit")
 const cancelEdit = document.querySelectorAll(".cancel")
 
 // Finally this works, took 3 hours
 // The key here is to add the eventlistener to all of the buttons
 // Then through a series of pathing to the proper element we toggle hidden
-update.forEach(elem => elem.addEventListener("click", 
+displayUpdateForm.forEach(elem => elem.addEventListener("click", 
     (e) => {
         // e.target.parentElement.previousElementSibling.classList.toggle("hidden")
         e.target.parentElement.parentElement.previousElementSibling.lastElementChild.classList.toggle("hidden")
