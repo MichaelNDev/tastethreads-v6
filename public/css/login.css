@@ -120,8 +120,11 @@ main {
     justify-content: center;
     align-items: center;
     
-    padding-top: 100px;
+    /* padding-top: 100px; */
     width: 100vw;
+    min-height: 800px;
+    flex-grow: 1;
+    margin-right: 25px;
 }
 
 .card {
@@ -194,8 +197,14 @@ footer {
     width: 100%;
     background-color: var(--l-text);
     color: var(--l-background);
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    /* position: absolute;
+    bottom: 0; */
+    /* left: 0; */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 

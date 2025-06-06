@@ -36,9 +36,15 @@ img {
     width: auto;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -93,11 +99,13 @@ main {
     padding-right: 30px;
     padding-top: 100px;
     width: 100%;
-    min-width: 1000px;
+    min-height: 800px;
+    
 }
 
 .headliner {
     width: 50%;
+    min-width: 450px;
 }
 
 .headliner a {
@@ -129,6 +137,7 @@ h1 {
     align-items: center;
     padding-top: 50px;
     width: 50%;
+    min-width: 450px;
 }
 
 img {
@@ -157,9 +166,15 @@ footer {
     align-items: center;
     border-top: 1px solid var(--l-text);
     height: 50px;
-    width: 100%;
+    width: 100vw;
     background-color: var(--l-text);
     color: var(--l-background);
     position: absolute;
     bottom: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }

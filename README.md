@@ -6,7 +6,7 @@ TasteThreads was created to answer an important question I most commonly receive
 
 TasteThreads is a new app designed for crowdsourcing the best food or dish restuarants are known for(ideally the lesser known and niche restaurants). With the crowdsource effort, new users can come in and see what food is popular and may want to try while hearing about others' experience with a particular dish!
 
-### Built With
+## Built With
 
 EJS
 NODE.JS
@@ -14,13 +14,13 @@ EXPRESS.JS
 MONGODB
 JAVASCRIPT
 
-### Getting Started
+## Getting Started
 
-#### Install
+### Install
 
 - npm install
 
-#### Setup
+### Setup
 
 - Create a .env file in config folder and add the following as `key = value`
   - DB_STRING = `your database URI`
@@ -30,11 +30,11 @@ JAVASCRIPT
   - API_SECRET = `your cloudinary api secret`
   - SECRET = `your secret for session`
 
-#### Run
+### Run
 
 `npm start`
 
-### Features Completed:
+## Features Completed:
 
 - User signup
 - Session establish
@@ -44,9 +44,9 @@ JAVASCRIPT
 - Post upload with cloudinary images
 - CSS styling
 
-### Partially Completed:
+## Partially Completed:
 
-### Not Completed:
+## Not Completed:
 
 - Mobile View
 - Flash Messages
