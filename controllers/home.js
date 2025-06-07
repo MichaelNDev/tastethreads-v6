@@ -94,7 +94,7 @@ module.exports = {
             // populate is an interesting method add to anki
             const posts = await Post.find().populate('userId')
             res.render('dashboard', {posts: posts})
-            console.log(posts)
+            // console.log(posts)
         } catch(err) {
             console.log(err)
         }
@@ -120,7 +120,7 @@ module.exports = {
                 }
             )
             await newPost.save()
-            console.log(newPost)
+            // console.log(newPost)
             console.log('Post has been added')
             res.redirect('/dashboard')
         } catch(err) {
@@ -135,7 +135,7 @@ module.exports = {
             // variable contains all reviews associated with the post ID
             const thisReview = await Review.find({postId: req.params.id})
             const thisUser = req.user.username
-            console.log(thisReview)
+            // console.log(thisReview)
             res.render("post", {currentPost: thisPost, reviews: thisReview, currentUser: thisUser})
         } catch(err) {
             console.log(err)
@@ -154,7 +154,8 @@ module.exports = {
 
         try {
             await newReview.save()
-            console.log(newReview)
+            // console.log(newReview)
+            console.log('Review has been created!')
             res.redirect(req.get('referer'))
         } catch(err) {
             console.log(err)

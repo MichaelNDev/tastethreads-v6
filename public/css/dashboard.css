@@ -19,17 +19,27 @@
     --d-warning: #FFA07A;
     --d-error: #FF8C6B;
 }
+* {
+  box-sizing: border-box;
+}
+
 
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
 
 body {
     font-family: "Raleway", sans-serif;
     background-color: var(--l-background);
     color: var(--l-text);
     position: relative;
+    
 }
 
 nav {
@@ -43,16 +53,18 @@ nav {
     position: fixed;
     width: 100%;
     background-color: var(--l-background);
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav-buttons {
     display: flex;
 }
 
-ul {
+nav ul {
     display: flex;
     justify-content: center;
-    padding-left: 0px;
     padding-right: 10px;
 }
 
@@ -104,6 +116,10 @@ nav li a:hover {
     font-size: 32px;
 }
 
+.wrapper {
+    width: 100%;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -112,6 +128,16 @@ main {
     
     padding-top: 100px;
     width: 100vw;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.file-upload {
+    align-self: flex-end;
 }
 
 i {
@@ -126,12 +152,12 @@ footer {
     align-items: center;
     border-top: 1px solid var(--l-text);
     height: 50px;
-    width: 100%;
+    width: 100vw;
     background-color: var(--l-text);
     color: var(--l-background);
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 
 .section-two {
@@ -148,6 +174,18 @@ h2 {
     color: var(--l-background);
     border-bottom: 1px solid var(--l-text);
     padding-bottom: 20px;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    
+    padding-right: 20px;
 }
 
 input {
@@ -162,18 +200,19 @@ input {
     font-size: 18px;
 }
 
-ul {
+.section-two ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 3rem;
+    padding-right: 20px;
 }
 
 /* Card Design for Posts */
 
 .card {
     height: 625px;
-    width: 320px;
+    width: 350px;
     border: 5px solid var(--l-accent);
     border-radius: 20px;
     box-shadow: 0px 1px 20px var(--l-accent);
@@ -255,4 +294,34 @@ img {
     justify-content: center;
     gap: 10px;
     align-items: center;
+}
+
+
+@media (width <= 400px) {
+    nav li {
+        padding-right: 10px;
+    }
+
+    .section-one {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        gap: 5px
+    }
+
+    input {
+        min-width: 350px;
+    }
+
+    #imgUpload {
+        padding: 10px;
+        margin: 0;
+    }
 }

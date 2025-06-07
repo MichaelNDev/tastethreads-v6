@@ -275,6 +275,25 @@ form {
     flex-direction: column;
 }
 
+.container-form label {
+    margin-top: 10px;
+}
+
+.container-form form button {
+    margin-top: 10px;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid var(--d-primary);
+    background-color: var(--l-primary);
+}
+
+.container-form form button:hover{
+    background-color: var(--l-secondary);
+    transition: ease-out .2s;
+    border: 1px solid var(--l-secondary);
+}
 
 h3 {
     padding: 0;
@@ -382,3 +401,4 @@ button > i {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+

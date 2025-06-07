@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <nav>
         <div class="logo">
             <a href="/">
@@ -26,33 +27,42 @@
             <div>
         </div>
     </nav>
+    <div class="wrapper">
     <main>
         <div class="section-one">
             <h2>Upload A Dish You'd Like To Share!</h2>
             <p>Have a special dish you enjoy from a local restaurant? Upload and share them!</p>
 
             <form action="/post" method="POST" enctype="multipart/form-data">
-                <label for="titleinput">Dish Name</label>
-                <input type="text" id="titleinput" name="titleinput">
-
-                <label for="price">Price</label>
-                <input type="number" id="price" name="price" step="0.01">
-
-                <label for="restaurant">Restaurant</label>
-                <input type="text" id="restaurant" name="restaurant">
-
-                <label for="city">City</label>
-                <input type="text" id="city" name="city">
-
+                <div class="input-container">
+                    <label for="titleinput">Dish Name</label>
+                    <input type="text" id="titleinput" name="titleinput">
+                </div>
+                <div class="input-container">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" step="0.01">
+                </div>
+                <div class="input-container">
+                    <label for="restaurant">Restaurant</label>
+                    <input type="text" id="restaurant" name="restaurant">
+                </div>
+                <div class="input-container">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city">
+                </div>
+                <div class="input-container">
                 <label for="meats">Choose a meat category:</label>
-                <select name="meats" id="meats">
-                    <option value="">--Please choose a category--</option>
-                    <option value="Beef">Beef</option>
-                    <option value="Pork">Pork</option>
-                    <option value="Poultry">Poultry</option>
-                    <option value="Seafood">Seafood</option>
-                </select>
-                <input type="file" id="imgUpload" name="file">
+                    <select name="meats" id="meats">
+                        <option value="">--Please choose a category--</option>
+                        <option value="Beef">Beef</option>
+                        <option value="Pork">Pork</option>
+                        <option value="Poultry">Poultry</option>
+                        <option value="Seafood">Seafood</option>
+                    </select>
+                </div>
+                <div class="input-container file-upload">
+                    <input type="file" id="imgUpload" name="file">
+                </div>
                 <button type="submit">Upload</button>
             </form>
         </div>
@@ -89,7 +99,8 @@
             </ul>
         </div>
     </main>
-    <!-- <footer>Developed by MichaelNDev</footer> -->
+    <footer>Developed by MichaelNDev</footer>
+    </div>
     <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>
     <!-- /public/js/dashboard will not work because our path has assume /public as the default -->
     <script src="/js/dashboard.js"></script>
