@@ -86,7 +86,7 @@ li a:hover {
     background-color: var(--l-primary);
     text-decoration: none;
     color: var(--l-text);
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .logo {
@@ -198,4 +198,12 @@ footer {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+}
+
+/* mobile display */
+
+@media (max-width: 414px) {
+    .card {
+        max-width: 200px;
+    }
 }

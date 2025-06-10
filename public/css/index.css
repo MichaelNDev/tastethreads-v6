@@ -31,27 +31,21 @@
 }
 
 
-img {
-    height: 200px;
-    width: auto;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: "Raleway", sans-serif;
     background-color: var(--l-background);
     color: var(--l-text);
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 nav {
@@ -108,7 +102,14 @@ main {
     min-width: 450px;
 }
 
-.headliner a {
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.links a {
     border: 1px solid var(--l-primary);
     border-radius: 10px;
     padding: 15px 20px;
@@ -119,7 +120,7 @@ main {
     margin-right: 20px;
 }
 
-.headliner a:hover{
+.links a:hover{
     border: 1px solid var(--l-secondary);
     background-color: var(--l-secondary);
     transition: ease-out .2s;
@@ -134,17 +135,20 @@ h1 {
 .image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 50px;
     width: 50%;
     min-width: 450px;
 }
 
 img {
-    height: 550px;
+    width: 100%;
+    height: auto;
+    max-height: 720px;
     border: 10px solid var(--l-accent);
     border-radius: 100px;
     box-shadow: 10px 10px 7px var(--l-text);
+    object-fit: cover;
 }
 
 img:hover {
@@ -166,17 +170,26 @@ footer {
     align-items: center;
     border-top: 1px solid var(--l-text);
     height: 50px;
-    width: 100vw;
+    min-height: 50px;
     background-color: var(--l-text);
     color: var(--l-background);
-    position: absolute;
-    bottom: 0;
+
+    margin-top: auto;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+/* laptop display */
+
+@media (max-width: 1440px) {
+    img {
+        height: 500px;
+    }
 }
 
 

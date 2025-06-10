@@ -19,17 +19,11 @@
     --d-warning: #FFA07A;
     --d-error: #FF8C6B;
 }
-* {
-  box-sizing: border-box;
-}
+
 
 
 html, body {
     height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 
@@ -38,7 +32,6 @@ body {
     font-family: "Raleway", sans-serif;
     background-color: var(--l-background);
     color: var(--l-text);
-    position: relative;
     
 }
 
@@ -50,12 +43,10 @@ nav {
     height: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    position: fixed;
-    width: 100%;
+
+    /* width: auto; */
     background-color: var(--l-background);
-    top: 0;
-    left: 0;
-    right: 0;
+    
 }
 
 .nav-buttons {
@@ -117,6 +108,8 @@ nav li a:hover {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -125,9 +118,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    padding-top: 100px;
-    width: 100vw;
+    width: 100%;
 }
 
 form {
@@ -152,12 +143,9 @@ footer {
     align-items: center;
     border-top: 1px solid var(--l-text);
     height: 50px;
-    width: 100vw;
+    width: auto;
     background-color: var(--l-text);
     color: var(--l-background);
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
 }
 
 .section-two {
@@ -169,13 +157,15 @@ h2 {
     font-size: 32px;
 }
 .section-one {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--l-text);
     color: var(--l-background);
     border-bottom: 1px solid var(--l-text);
     padding-bottom: 20px;
     width: 100%;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 .section-two {
@@ -184,8 +174,6 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    
-    padding-right: 20px;
 }
 
 input {
@@ -205,7 +193,7 @@ input {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 3rem;
-    padding-right: 20px;
+    padding: 0;
 }
 
 /* Card Design for Posts */
