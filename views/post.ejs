@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Page</title>
-    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- <link rel="stylesheet" href="/css/normalize.css" /> -->
     <link rel="stylesheet" href="/css/post.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +96,7 @@
                         <div class="delete-update">
                             <div>
                                 <!-- Unfortunately unable to add an icon since it'll cause issue with the onlick event. -->
-                                <button class="edit">edit</button>
+                                <button class="edit">Edit</button>
                             </div>
                             <form action="/deleteReview/<%= reviews[i].id %>?_method=DELETE" method="POST">
                                 <button type="submit"><i class="fa-solid fa-trash"></i></button>

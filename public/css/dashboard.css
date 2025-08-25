@@ -24,6 +24,8 @@
 
 html, body {
     height: 100%;
+    /* This removes the white space on the right side of screen */
+    overflow-x: hidden;
 }
 
 
@@ -43,6 +45,9 @@ nav {
     height: 100px;
     padding-left: 10px;
     padding-right: 10px;
+    /* sticky works like fixed but it won't go past the width of parent container. this prevents vertical scrollbar overlap. top 0 is required */
+    position: sticky;
+    top: 0;
 
     /* width: auto; */
     background-color: var(--l-background);
