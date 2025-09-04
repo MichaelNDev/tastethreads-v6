@@ -99,7 +99,6 @@ main {
 
 .headliner {
     width: 50%;
-    min-width: 450px;
 }
 
 .links {
@@ -184,7 +183,7 @@ footer {
     width: 100%;
 }
 
-/* laptop display */
+/* --- laptop display ---------------------------------------------- */
 
 @media (max-width: 1440px) {
     img {
@@ -193,3 +192,109 @@ footer {
 }
 
 
+/* --- Mobile Display -------------------------------------------- */
+
+@media (max-width: 430px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        
+        min-height: auto;
+        height: auto;
+        padding: 100px 0 0 0;
+        width: 100%;
+        overflow-x: hidden;
+        right: 0;
+    }
+
+    .headliner {
+        padding: 0;
+        width: 100%;
+        min-width: none;
+        height: auto;
+        
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-wrap: wrap;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .image {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    img {
+        max-width: 430px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        
+    }
+
+    img:hover {
+        border: none;
+        transition: none;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 430px;
+        right: 0;
+        left: 0;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        margin:0;
+        padding: 0;
+        gap: 10px;
+
+    }
+
+    .links a {
+        font-size: 0.75rem;
+        width: 70%;
+        padding: 10px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--l-text);
+    height: 50px;
+    min-height: 50px;
+    width: 100%;
+    background-color: var(--l-text);
+    color: var(--l-background);
+    margin-top: auto;
+}
+    
+}

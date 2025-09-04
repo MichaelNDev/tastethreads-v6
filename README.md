@@ -46,7 +46,8 @@ JAVASCRIPT
 
 ## Partially Completed:
 
+- Mobile View (only feed and post page completed)
+
 ## Not Completed:
 
-- Mobile View
 - Flash Messages
