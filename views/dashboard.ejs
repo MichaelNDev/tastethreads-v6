@@ -31,7 +31,7 @@
     <main>
         <div class="section-one">
             <h2>Upload A Dish You'd Like To Share!</h2>
-            <p>Have a special dish you enjoy from a local restaurant? Upload and share them!</p>
+            <p>(Or scroll down and see what our users recommend!)</p>
 
             <form action="/post" method="POST" enctype="multipart/form-data">
                 <div class="input-container">
@@ -75,7 +75,7 @@
                 <button onclick="filterCards('Pork')">Pork</button>
                 <button onclick="filterCards('Poultry')">Poultry</button>
                 <button onclick="filterCards('Seafood')">Seafood</button>
-                <button onclick="filterCards('all')">Show All</button>
+                <button onclick="filterCards('all')">Reset</button>
             </div>
             <ul>
                 <% for(let i = 0; i < posts.length; i++) {%>

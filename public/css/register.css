@@ -202,8 +202,43 @@ footer {
 
 /* mobile display */
 
-@media (max-width: 414px) {
-    .card {
-        max-width: 200px;
+@media (max-width: 530px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 150px;
+        margin: 0;
+        gap: 10px;
+        padding-right: 1rem;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 70px;
+    }
+
+    .nav-buttons {
+        height: 100%;
+    }
+
+    .nav-buttons a {
+        font-size: 0.75rem;
+        padding: 10px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .card{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }

@@ -208,8 +208,6 @@ footer {
 
 /* mobile display */
 
-@media (max-width: 414px) {
-    .card {
-        max-width: 200px;
-    }
+@media (max-width: 430px) {
+    
 }
