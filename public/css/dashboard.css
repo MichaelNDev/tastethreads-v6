@@ -350,3 +350,23 @@ img {
     }
 }
 
+@media (width <= 410px) {
+
+    .nav-buttons a {
+        font-size: 1rem;
+    }
+
+    .filter-card-button{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (width <= 400px) {
+
+    .nav-buttons a {
+        font-size: .85rem;
+        margin-right: .1rem;
+    }
+}
