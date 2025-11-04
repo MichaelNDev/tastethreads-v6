@@ -92,6 +92,7 @@ module.exports = {
     dashboard: async (req,res) => {
         try {
             // populate is an interesting method add to anki
+            // populate will replace the objectId of the property "userId" with the document its trying to reference
             const posts = await Post.find().populate('userId')
             res.render('dashboard', {posts: posts})
             // console.log(posts)

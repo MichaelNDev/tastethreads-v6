@@ -38,7 +38,8 @@
                     <h4>Overall Rating: <%= (reviews.map(x => x.rating).reduce((a,b) => a + b, 0) / reviews.length).toFixed(1) %></h4>
                 </div>
                 <span><strong>Price:</strong> $<%= currentPost.price %></span>
-                <span><strong>Restaurant:</strong> <%= currentPost.restaurant %></span>
+                <% let restaurant = currentPost.restaurant.toLowerCase().split(" ").join("+") %>
+                <span><strong>Restaurant:</strong><a href="https://www.google.com/search?q=<%= restaurant %>" target="_blank"> <%= currentPost.restaurant %></a></span>
                 <span><strong>City:</strong> <%= currentPost.city %></span>
                 <span><strong>Meat:</strong> <%= currentPost.meats %></span>
                 <span><strong>Recommended By: </strong><%= currentPost.userId.username %></span>
