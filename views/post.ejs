@@ -35,7 +35,7 @@
             <div class="card">
                 <img src="<%= currentPost.imageurl %>" alt="an img"/>
                 <div class="overall-rating">
-                    <h4>Overall Rating: <%= (reviews.map(x => x.rating).reduce((a,b) => a + b, 0) / reviews.length).toFixed(1) %></h4>
+                    <h4>Overall Rating: <%= reviews.length < 1 ? "No Ratings" : (reviews.map(x => x.rating).reduce((a,b) => a + b, 0) / reviews.length).toFixed(1) %></h4>
                 </div>
                 <span><strong>Price:</strong> $<%= currentPost.price %></span>
                 <% let restaurant = currentPost.restaurant.toLowerCase().split(" ").join("+") %>
@@ -65,6 +65,11 @@
         </div>
         <div class="container-right">
             <h2>Reviews</h2>
+            <% if(reviews.length < 1){ %>
+                <ul>
+                    <span>No reviews yet.</span>
+                </ul>
+            <% } else { %>
             <ul>
                 <% for(let i = 0; i < reviews.length; i++) {%>
                     <li class="review-list">
@@ -107,6 +112,7 @@
                     </li>
                 <% } %>
             </ul>
+            <% } %>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/2eabe83adc.js" crossorigin="anonymous"></script>

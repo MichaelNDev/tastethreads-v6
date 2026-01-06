@@ -107,6 +107,9 @@ module.exports = {
             const result = await cloudinary.uploader.upload(req.file.path);
             // find the user who created the post
             const thisUser = await User.findById(req.user._id)
+            if(!req.body.titleinput || !req.body.price || !req.body.meats || !req.body.city || !req.body.restaurant || !result.secure_url){
+                return res.render('dashboard', {posts: posts})
+            }
             const newPost = new Post(
                 {
                     titleinput: req.body.titleinput,
